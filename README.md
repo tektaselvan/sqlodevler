@@ -51,3 +51,23 @@ Sorgu:
 
 select * from film 
 where rental_rate IN(0.99, 2.99, 4.99) AND replacement_cost IN(12.99, 15.99, 28.99);
+
+Ödev 3 | LIKE ILIKE
+
+1- country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
+Sorgu:
+select * from Country where country LIKE 'A%' and country LIKE '%a';
+
+2- country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
+Sorgu:
+select * from country where LEN(country) = 6 and country LIKE '%a';
+
+3- film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren film isimlerini sıralayınız.
+Sorgu:
+SELECT * FROM film WHERE name LIKE '%t%t%t%t%';
+
+4- film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99 olan verileri sıralayınız.
+Sorgu:
+select * from film where title LIKE 'C%' and lenght>90 and rental_rate = 2.99;
+
+
