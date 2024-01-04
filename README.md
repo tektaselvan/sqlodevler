@@ -70,4 +70,32 @@ SELECT * FROM film WHERE name LIKE '%t%t%t%t%';
 Sorgu:
 select * from film where title LIKE 'C%' and lenght>90 and rental_rate = 2.99;
 
+Ödev 4 | DISTINCT ve COUNT
 
+1- film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+
+Sorgu:
+
+Select distinct replacement_cost from film;
+
+2- film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+
+Sorgu:
+
+Select Count(distinct replacement_cost) from film;
+
+3- film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+
+Sorgu:
+
+select count(*) from film where title LIKE 'T%' and rating = 'G';
+
+4- country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+
+Sorgu:
+
+select count(*) from country where lenght(country) = 5;
+
+5- city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
+
+select count(*) from city where city ILIKE '%r';
