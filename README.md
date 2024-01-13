@@ -1,3 +1,5 @@
+## Ödev 1
+
 1- film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
 
 Sorgu:
@@ -31,6 +33,9 @@ Sorgu:
 
 select * from film where length < 50 and not (not (rental_rate = 2.99 or rental_rate = 4.99));
 
+
+## Ödev 2
+
 1- film tablosunda bulunan tüm sütunlardaki verileri replacement cost değeri 12.99 dan büyük eşit ve 16.99 küçük olma koşuluyla sıralayınız ( BETWEEN - AND yapısını kullanınız.)
 
 Sorgu:
@@ -52,7 +57,7 @@ Sorgu:
 select * from film 
 where rental_rate IN(0.99, 2.99, 4.99) AND replacement_cost IN(12.99, 15.99, 28.99);
 
-Ödev 3 | LIKE ILIKE
+## Ödev 3 | LIKE ILIKE
 
 1- country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
 Sorgu:
@@ -70,7 +75,7 @@ SELECT * FROM film WHERE name LIKE '%t%t%t%t%';
 Sorgu:
 select * from film where title LIKE 'C%' and lenght>90 and rental_rate = 2.99;
 
-Ödev 4 | DISTINCT ve COUNT
+## Ödev 4 | DISTINCT ve COUNT
 
 1- film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
 
@@ -99,3 +104,25 @@ select count(*) from country where lenght(country) = 5;
 5- city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
 
 select count(*) from city where city ILIKE '%r';
+
+## Ödev 5 | LIMIT AND OFFSET
+
+1- film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+
+Sorgu:
+
+select * from film where title LIKE '%n' order by lenght desc limit 5;
+
+2- film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci(6,7,8,9,10) 5 filmi(6,7,8,9,10) sıralayınız.
+
+Sorgu:
+
+select * from film where title LIKE '%n' order by lenght asc offset 5 limit 5;
+
+3- customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+
+Sorgu:
+
+select * from customer where store_id = 1 order by last_name desc limit 4;
+
+
