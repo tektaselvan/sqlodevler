@@ -196,7 +196,9 @@ email VARCHAR(100)
 Sorgu:
 
 insert into employee (id, name, email, birthday) values (1, 'Mirabelle', 'mdedomenico0@nationalgeographic.com', '2023-01-18');
+
 insert into employee (id, name, email, birthday) values (2, 'Johnathan', 'jbarosch1@washington.edu', '2023-01-21');
+
 insert into employee (id, name, email, birthday) values (3, 'Wini', 'wpeirazzi2@seesaa.net', '2023-04-22');
 
 3- Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
@@ -222,4 +224,23 @@ DELETE FROM employee WHERE LENGTH(name)>8
 
 Sorgu:
 
-select 
+SELECT city.city_name, country.country_name
+FROM city
+INNER JOIN country ON city.country_id = country.country_id;
+
+2- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+Sorgu:
+
+SELECT payment.payment_id, customer.first_name, customer.last_name
+FROM payment
+INNER JOIN customer ON payment.customer_id = customer.customer_id;
+
+3- customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+Sorgu:
+
+SELECT rental.rental_id, customer.first_name, customer.last_name
+FROM rental
+INNER JOIN customer ON rental.customer_id = customer.customer_id;
+
