@@ -196,7 +196,7 @@ birthday DATE,
 email VARCHAR(100)
 )```
 
-**2- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.**
+###2- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
 Sorgu:
 
@@ -206,7 +206,7 @@ Sorgu:
 
 ```insert into employee (id, name, email, birthday) values (3, 'Wini', 'wpeirazzi2@seesaa.net', '2023-04-22');```
 
-** 3- Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım. **
+###3- Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 
 Sorgu:
 
@@ -215,7 +215,7 @@ Sorgu:
 
 ```UPDATE  employee SET name= '*' WHERE name='Astrix'```
 
-** 4- Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım. **
+###4- Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 
 Sorgu:
 
@@ -225,7 +225,7 @@ Sorgu:
 
 ## Ödev 9 INNER JOIN
 
-**1- city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.**
+###1- city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 
 Sorgu:
 
@@ -233,7 +233,7 @@ Sorgu:
 FROM city
 INNER JOIN country ON city.country_id = country.country_id;```
 
-**2- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.**
+###2- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 
 Sorgu:
 
@@ -241,7 +241,7 @@ Sorgu:
 FROM payment
 INNER JOIN customer ON payment.customer_id = customer.customer_id;```
 
-**3- customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.**
+###3- customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 
 Sorgu:
 
@@ -251,7 +251,7 @@ INNER JOIN customer ON rental.customer_id = customer.customer_id;```
 
 ## Ödev 10 LEFT JOIN | RIGHT JOIN | FULL JOIN
 
-**1-city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.** 
+###1-city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız. 
 
 Sorgu:
 
@@ -259,7 +259,7 @@ Sorgu:
 LEFT JOIN country
 ON city.id = country.city_id;```
 
-**2- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.**
+###2- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
 
 Sorgu:
 
@@ -267,7 +267,7 @@ Sorgu:
 RIGHT JOIN customer
 ON payment.customer_id = customer.id;```
 
-**3- customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.**
+###3- customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
 
 Sorgu: 
 
@@ -278,7 +278,7 @@ ON customer.id = rental.customer_id;```
 
 ## Ödev 11 UNION | INTERSECT AND EXCEPT
 
-**1- actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.**
+###1- actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
 
 Sorgu:
 
@@ -286,7 +286,7 @@ Sorgu:
 UNION 
 SELECT first_name FROM customer;```
 
-**2- actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.**
+###2- actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
 
 Sorgu:
 
@@ -294,7 +294,7 @@ Sorgu:
 INTERSECT
 SELECT first_name FROM customer;```
 
-**3- actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.**
+###3- actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
 
 Sorgu:
 
@@ -302,7 +302,7 @@ Sorgu:
 EXCEPT
 SELECT first_name FROM customer;```
 
-**4- İlk 3 sorguyu tekrar eden veriler için de yapalım.**
+###4- İlk 3 sorguyu tekrar eden veriler için de yapalım.
 
 Sorgu:
 
@@ -320,19 +320,19 @@ SELECT first_name FROM customer;```
 
 ## Ödev 12
 
-**1- film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?**
+###1- film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
 
 Sorgu:
 
 ```SELECT COUNT(*) FROM film where length > ( SELECT AVG(length) from film );```
 
-**2- film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?**
+###2- film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
 
 Sorgu:
 
  ```select COUNT(*) from film where MAX(rental_rate) = ( SELECT MAX(rental_rate) from film );```
 
-**3- film tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.**
+###3- film tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.
 
 Sorgu:
 
@@ -341,7 +341,7 @@ MIN(rental_rate) = ALL (select * from film where MIN(rental_rate))
 AND replacement_cost = ALL
 (select * from film where MIN(replacement_cost));```
 
-**4- payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.**
+###4- payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
 
 Sorgu:
 
